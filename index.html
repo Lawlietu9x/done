@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WeatherToday</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Weather in your city</h1>
+  <form class="ourform" action="" method="get">
+    <input class="input" type="text" id="city" name="city" placeholder="Enter a City">
+    <input class="btn" type="submit" name="send" value="Search">
+  </form>
+  {% if city_name %}
+  <p>
+    <h3 class="name">The weather in {{city_name}} is:</h3>
+  <div class="conditions">Weather conditions: {{weather_code}}</div>
+  <div class="value">Temperature: {{temp}} <sup>o</sup>C</div>
+  <div class="speed">Wind speed: {{wind_speed}} m/s</div>
+  <div class="type">The type of precipitation: {{precipitation_type}}</div>
+
+  {% endif %}
+</p>
+</div>
+</body>
+</html>
